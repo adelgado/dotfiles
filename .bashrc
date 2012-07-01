@@ -16,4 +16,7 @@ esac
 
 alias la='ls -A'
 alias untar='tar -xvzf'
+alias cp='cp -v'
+alias mv='mv -v'
+
 PS1='[\u@\h \W]\$ '
