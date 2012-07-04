@@ -5,13 +5,13 @@ Linux)
 		return
 	fi
 
-	alias ls='ls -lFt --color=always'
+	alias ls='ls -lF --color=always'
 	;;
 Darwin)
 	# If not running interactively, don't do anything
 	[[ $- != *i* ]] && return
 
-	alias ls='ls -lFtG'
+	alias ls='ls -lFG'
 	;;
 esac
 
@@ -20,7 +20,7 @@ alias untar='tar -xvzf'
 alias cp='cp -v'
 alias mv='mv -v'
 
-PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
+PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \n \[\e[1;32m\]\$\[\e[0m\] '
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
