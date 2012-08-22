@@ -11,7 +11,7 @@ Darwin)
 	# If not running interactively, don't do anything
 	[[ $- != *i* ]] && return
 
-	alias ls='ls -lFG'
+	alias ls='ls -lFGh'
 	;;
 esac
 
