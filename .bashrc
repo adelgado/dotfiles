@@ -5,6 +5,14 @@ Linux)
 		return
 	fi
 
+	if [ -e $(which pacman) ]
+	then
+		alias i='sudo pacman -Syu'
+		alias s='sudo pacman -Ss'
+	fi
+
+
+
 	alias ls='ls -lF --color=always'
 	;;
 Darwin)
@@ -20,7 +28,12 @@ alias untar='tar -xvzf'
 alias cp='cp -v'
 alias mv='mv -v'
 
+export EDITOR="vim"
+
 PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \n \[\e[1;32m\]\$\[\e[0m\] '
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
+
+# Set editing mode to vi
+set -o vi
