@@ -15,3 +15,13 @@ set tabstop=3             " tab spacing
 set shiftwidth=3          " indent/outdent by 4 columns
 set shiftround            " always indent/outdent to the nearest tabstop
 set smarttab              " use tabs at the start of a line, spaces elsewhere
+
+let &titlestring = expand("%:t")
+if &term == "screen"
+	set t_ts=k
+	set t_fs=\
+endif
+if &term == "screen" || &term == "xterm"
+	set title
+endif
+
