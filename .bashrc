@@ -36,4 +36,4 @@ PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \n \[\e[1;32m\]\$\[\e[0m\]
 shopt -s checkwinsize
 
 # Set editing mode to vi
-set -o vi
+set -o emacs
