@@ -36,6 +36,12 @@ parse_git_branch() {
 
 PS1="\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] $(parse_git_branch) \n \[\e[1;32m\]$\[\e[0m\] "
 
+# git unique commits on a branch
+# usage: guc staging
+function guc() {
+	git log --no-merges "$@" --not $(git for-each-ref --format="%(refname)" refs/heads | grep -Fv refs/heads/"$@")
+}
+
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
 
