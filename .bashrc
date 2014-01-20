@@ -34,7 +34,7 @@ parse_git_branch() {
 	echo `git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'`
 }
 
-PS1="\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] $(parse_git_branch) \n \[\e[1;32m\]$\[\e[0m\] "
+PS1="\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \$(parse_git_branch) \n \[\e[1;32m\]$\[\e[0m\] "
 
 # git unique commits on a branch
 # usage: guc staging
