@@ -80,5 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias subl="open -a'Sublime Text'"
 alias gx="open . -agitx"
+# http://stevenharman.net/git-clean-delete-already-merged-branches
+alias gclean='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
