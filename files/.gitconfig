@@ -1,3 +1,11 @@
 [user]
 	name = Alessandro Delgado
 	email = adelgado1313@gmail.com
+
+; https://twitter.com/niborst/status/742625951843033088/photo/1
+[diff]
+	compactionHeuristic = true
+
+; http://stackoverflow.com/questions/23918062/simple-vs-current-push-default-in-git-for-decentralized-workflow
+[push]
+	default = simple
